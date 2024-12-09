@@ -1,0 +1,113 @@
+@use "./variables.scss" as vars;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.full-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: vars.$linear-gradient;
+}
+
+.wrapper {
+  overflow: hidden;
+  // width: 300px;
+  height: 40vh;
+  
+
+  // glassmorphism
+
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+  backdrop-filter: blur(10px); // Blur effect
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 16px; // Smooth rounded corners
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+
+  .h1-margin{
+    margin-bottom: 40px;
+  }
+
+
+  .login-form {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+}
+
+.input-field:hover,
+.input-field:focus {
+  border-color: #3498db;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn,
+.signup-btn {
+  flex: 1;
+  padding: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.login-btn {
+  background-color: #3498db;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+}
+
+.signup-btn {
+  background-color: transparent;
+  border: 1px solid #3498db;
+  color: #3498db;
+  margin-right: 5px;
+}
+
+.signup-btn:hover {
+  border-color: #2980b9;
+  color: #2980b9;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
+}
